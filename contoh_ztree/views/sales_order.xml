@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Author => Albertus Restiyanto Pramayudha
+     email  => xabre0010@gmail.com
+     linkedin => https://www.linkedin.com/in/albertus-restiyanto-pramayudha-470261a8/
+     youtube => https://www.youtube.com/channel/UCCtgLDIfqehJ1R8cohMeTXA
+-->
+<odoo>
+    <record id="view_ztree_form_inherit_sale" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                      <attribute name="widget">ztree_select</attribute>
+                    <attribute name="options">{'ztree_parent_key': 'parent_id','ztree_expend_level': '2', 'order': 'name' }</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
