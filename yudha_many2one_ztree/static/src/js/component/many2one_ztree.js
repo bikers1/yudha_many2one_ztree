@@ -9,5 +9,5 @@ export class FieldZTreeMany2one extends Many2OneField {
         super.setup();
     }
 }
-
+FieldZTreeMany2one.additionalClasses = ['o_field_many2one'];
 registry.category("fields").add("ztree_select", FieldZTreeMany2one);

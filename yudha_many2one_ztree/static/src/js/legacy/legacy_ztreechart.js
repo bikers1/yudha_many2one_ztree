@@ -2,7 +2,7 @@ odoo.define('yudha_many2one_ztree.ztree_chart', function (require) {
 "use strict";
 
     const fieldRegistry = require('web.field_registry');
-    const { FieldOne2Many, FieldMany2One } = require('web.relational_fields');
+    const { FieldOne2Many } = require('web.relational_fields');
     const AbstractField = require('web.AbstractField');
     const core = require('web.core');
     const rpc = require('web.rpc');

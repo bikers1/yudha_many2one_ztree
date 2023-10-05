@@ -9,5 +9,5 @@ export class FieldZTreeChart extends X2ManyField {
         super.setup();
     }
 }
-
+FieldZTreeChart.additionalClasses = ['o_field_one2many'];
 registry.category("fields").add("ztree_chart", FieldZTreeChart);
