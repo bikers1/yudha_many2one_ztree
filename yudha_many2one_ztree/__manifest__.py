@@ -27,11 +27,15 @@
 	'demo': [],
 	'images': [],
     'assets': {
-        'web.assets_backend': [
-            'yudha_many2one_ztree/static/src/scss/variables.scss',
-            'yudha_many2one_ztree/static/src/scss/views.scss',
-            'yudha_many2one_ztree/static/src/lib/ztree_v3/css/awesomeStyle/fa.scss',
-            'yudha_many2one_ztree/static/src/lib/ztree_v3/css/awesomeStyle/awesome.scss',
+		'web.assets_common': [
+			('include', 'web._assets_helpers'),
+			'yudha_many2one_ztree/static/src/scss/variables.scss',
+			'yudha_many2one_ztree/static/src/scss/views.scss',
+			'yudha_many2one_ztree/static/src/lib/ztree_v3/css/awesomeStyle/fa.scss',
+			'yudha_many2one_ztree/static/src/lib/ztree_v3/css/awesomeStyle/awesome.scss',
+
+			],
+			'web.assets_backend': [
             'yudha_many2one_ztree/static/src/lib/ztree_v3/js/jquery.ztree.core.js',
             'yudha_many2one_ztree/static/src/js/legacy/legacy_widget_ztree.js',
             'yudha_many2one_ztree/static/src/js/legacy/legacy_many2one_ztree.js',

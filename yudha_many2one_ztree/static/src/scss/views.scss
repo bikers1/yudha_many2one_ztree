@@ -77,15 +77,15 @@ $z-line-color: lighten($o-main-text-color, 30%);
       color: $o-main-text-color;
 
       &.roots_docu {
-        display: none !important;
+        display: none;
       }
 
       &.center_docu {
-        display: none !important;
+        display: none;
       }
 
       &.bottom_docu {
-        display: none !important;
+        display: none;
       }
       &.switch {
         margin-left: -4px;
@@ -173,7 +173,7 @@ $z-line-color: lighten($o-main-text-color, 30%);
 @include media-breakpoint-down(sm) {
     #o_node_right {
         .o_chart_hierarchy_title {
-            font-size: 20px;
+            font-size: 20px !important;
             padding: 5px 0;
             border-bottom: 1px solid $o-chart-hierarchy-border-color;
         }
@@ -335,9 +335,9 @@ $z-line-color: lighten($o-main-text-color, 30%);
 
             strong {
                 display: block;
-                line-height: 1.2;
-                font-size: 11px;
-                color: lighten(gray('600'), 15%);
+                line-height: 1.2px;
+                font-size: $font-size-11;
+                color: lighten($o-brand-light600, 15%);
             }
         }
 
@@ -379,8 +379,8 @@ $z-line-color: lighten($o-main-text-color, 30%);
                 display: block;
 
                 .o_media_heading {
-                    color: lighten(gray('600'), 5%);
-                    font-size: 13px;
+                    color: lighten($o-brand-light600, 5%);
+                    font-size: $font-size-13;
                 }
             }
 
@@ -393,7 +393,7 @@ $z-line-color: lighten($o-main-text-color, 30%);
                         color: $o-brand-primary;
                     }
                     strong {
-                        color: lighten(gray('600'), 5%);
+                        color: lighten($o-brand-light600, 5%);
                     }
                 }
             }

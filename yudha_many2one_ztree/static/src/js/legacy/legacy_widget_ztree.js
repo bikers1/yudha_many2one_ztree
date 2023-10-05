@@ -18,7 +18,7 @@
     import { Component } from "@odoo/owl";
     const ztree_Max = 1000;
 
-    const zTree = Widget.extend{
+    const zTree = Widget.extend({
         className: 'ztree',
         template: 'App.zTree',
         init: function (setting, data) {

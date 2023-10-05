@@ -7,13 +7,13 @@
     import { Component } from "@odoo/owl";
     import AbstractField from 'web.AbstractField';
     import field_registry from 'web.field_registry';
-    import { zTree } from "yudha_many2one_ztree.zTree"
+    import  zTree  from "yudha_many2one_ztree.zTree";
     const qweb = core.qweb;
     const _t = core._t;
     const _lt = core._lt;
+
     const FieldZTree = FieldMany2One.extend({
-       supportedFieldTypes: ['many2one'],
-        //todo: many2many
+        supportedFieldTypes: ['many2one'],
         template: 'App.FieldZtree',
         SEARCH_MORE_LIMIT: 1000,
 
@@ -31,7 +31,7 @@
         start: function () {
             this._super.apply(this, arguments);
             var self = this;
-            alert('testing 123')
+            //点击外部关闭ztree
             $(document).delegate('body', 'click', function (ev) {
                 var $parent = $(ev.target).parents('.o_input_dropdown')
                 if (!$parent.length && self.many2one) {
@@ -243,6 +243,5 @@
         // private
     });
 
-FieldRegistry
-    .add('ztree_select', FieldZTree);
+FieldRegistry.add('ztree_select', FieldZTree);
     export default FieldZTree;
