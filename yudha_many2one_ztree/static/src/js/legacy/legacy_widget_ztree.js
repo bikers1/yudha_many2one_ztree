@@ -1,16 +1,27 @@
-odoo.define('yudha_many2one_ztree.WidgetzTree', function (require) {
-    "use strict";
+/** @odoo-module alias=yudha_many2one_ztree.zTree **/
 
+/**
+ * We define here the AbstractAction widget, which implements the ActionMixin.
+ * All client actions must extend this widget.
+ *
+ * @module @web/chrome/abstract_action
+ */
+    import core from "web.core";
+    import Widget from "web.Widget";
+    import { _t , qweb} from "web.core";
+    import { ComponentWrapper } from "web.OwlCompatibility";
+    import { LegacyComponent } from "./legacy_component";
 
-    var core = require('web.core');
-    var Widget = require('web.Widget');
-    var ztree_Max = 1000;
+    import { xml } from "@odoo/owl";
+    import { Component } from "@odoo/owl";
+    const ztree_Max = 1000;
 
-    var zTree = Widget.extend({
+    const zTree = Widget.extend{
         className: 'ztree',
         template: 'App.zTree',
         init: function (setting, data) {
             this._super.apply(this, arguments);
+            alert('ztree wdiget')
             this.setting = {
                 view: {
                     selectedMulti: true,
@@ -125,5 +136,5 @@ odoo.define('yudha_many2one_ztree.WidgetzTree', function (require) {
         }
     });
 
-    return zTree;
-})
+
+export default zTree;

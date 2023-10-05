@@ -1,11 +1,13 @@
 /** @odoo-module alias=app_web_widget_ztree.FieldZTree **/
 
     import { FieldMany2One } from 'web.relational_fields';
+    import core from "web.core";
     import { _t, qweb } from 'web.core';
     import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
     import { Component } from "@odoo/owl";
     const AbstractField = require('web.AbstractField');
     import FieldRegistry from 'web.field_registry';
+    import { zTree } from "yudha_many2one_ztree.zTree"
 
     const FieldZTree = FieldMany2One.extend({
        supportedFieldTypes: ['many2one'],
@@ -27,7 +29,7 @@
         start: function () {
             this._super.apply(this, arguments);
             var self = this;
-            //点击外部关闭ztree
+            alert('testing 123')
             $(document).delegate('body', 'click', function (ev) {
                 var $parent = $(ev.target).parents('.o_input_dropdown')
                 if (!$parent.length && self.many2one) {
