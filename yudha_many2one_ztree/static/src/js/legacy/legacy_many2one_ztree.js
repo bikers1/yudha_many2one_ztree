@@ -10,12 +10,12 @@
     const qweb = core.qweb;
     const _t = core._t;
     const _lt = core._lt;
+    import rpc from 'web.rpc';
 
     const FieldZTreeMany2one = FieldMany2One.extend({
         supportedFieldTypes: ['many2one'],
         template: 'App.FieldZtree',
         SEARCH_MORE_LIMIT: 1000,
-
         init: function () {
             alert('testing ')
             this._super.apply(this, arguments);
@@ -29,6 +29,7 @@
             this.ztree_expend_level = this.nodeOptions.ztree_expend_level;
         },
         start: function () {
+            alert('kq ga jalan sih')
             this._super.apply(this, arguments);
             var self = this;
             $(document).delegate('body', 'click', function (ev) {

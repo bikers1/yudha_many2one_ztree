@@ -11,11 +11,7 @@
     const qweb = core.qweb;
     const _t = core._t;
     const _lt = core._lt;
-    import { ComponentWrapper } from "web.OwlCompatibility";
-    import { LegacyComponent } from "./legacy_component";
-
-    import { xml } from "@odoo/owl";
-    import { Component } from "@odoo/owl";
+    import rpc from 'web.rpc';
     const ztree_Max = 1000;
 
     const zTree = Widget.extend({
