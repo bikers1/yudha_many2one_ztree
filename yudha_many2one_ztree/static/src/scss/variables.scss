@@ -1,3 +1,4 @@
+
 $o-chart-hierarchy-bg: white !default;
 $o-chart-hierarchy-border-color: $o-brand-secondary !default;
 
@@ -7,8 +8,8 @@ $o-chart-hierarchy-entry-line-w: 1px !default;
 $o-chart-hierarchy-entry-border-color: darken($o-chart-hierarchy-bg, 25%) !default;
 
 // MIXINS
-@mixin o-chart-hierarchy-line {
-    content: '';
-    background-color: $o-chart-hierarchy-bg;
-    border: 0px solid $o-chart-hierarchy-entry-border-color;
-}
+// @mixin o-chart-hierarchy-line {
+//     content: '';
+//     background-color: $o-chart-hierarchy-bg;
+//     border: 0px solid $o-chart-hierarchy-entry-border-color;
+// }

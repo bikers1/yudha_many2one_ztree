@@ -8,7 +8,9 @@
  */
     import core from "web.core";
     import Widget from "web.Widget";
-    import { _t , qweb} from "web.core";
+    const qweb = core.qweb;
+    const _t = core._t;
+    const _lt = core._lt;
     import { ComponentWrapper } from "web.OwlCompatibility";
     import { LegacyComponent } from "./legacy_component";
 

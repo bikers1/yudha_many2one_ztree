@@ -1,14 +1,16 @@
 /** @odoo-module alias=app_web_widget_ztree.FieldZTree **/
 
-    import { FieldMany2One } from 'web.relational_fields';
+    import { FieldOne2Many } from 'web.relational_fields';
+    import FieldRegistry from 'web.field_registry';
     import core from "web.core";
-    import { _t, qweb } from 'web.core';
     import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
     import { Component } from "@odoo/owl";
-    const AbstractField = require('web.AbstractField');
-    import FieldRegistry from 'web.field_registry';
+    import AbstractField from 'web.AbstractField';
+    import field_registry from 'web.field_registry';
     import { zTree } from "yudha_many2one_ztree.zTree"
-
+    const qweb = core.qweb;
+    const _t = core._t;
+    const _lt = core._lt;
     const FieldZTree = FieldMany2One.extend({
        supportedFieldTypes: ['many2one'],
         //todo: many2many
@@ -241,7 +243,6 @@
         // private
     });
 
-
-    FieldRegistry.add('ztree_select', FieldZTree);
-
+FieldRegistry
+    .add('ztree_select', FieldZTree);
     export default FieldZTree;
