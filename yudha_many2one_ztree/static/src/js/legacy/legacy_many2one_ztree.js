@@ -1,16 +1,14 @@
-/** @odoo-module **/
+odoo.define('yudha_many2one_ztree.ztree_select', function (require) {
+"use strict";
 
-    import { FieldMany2One } from 'web.relational_fields';
-    import FieldRegistry from 'web.field_registry';
-    import core from "web.core";
-    import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
-    import { Component } from "@odoo/owl";
-    import AbstractField from 'web.AbstractField';
-    import  zTree  from "yudha_many2one_ztree.zTree";
-    const qweb = core.qweb;
+    const fieldRegistry = require('web.field_registry');
+    const { FieldOne2Many, FieldMany2One } = require('web.relational_fields');
+    const core = require('web.core');
+    const rpc = require('web.rpc');
+    const session = require('web.session');
     const _t = core._t;
-    const _lt = core._lt;
-    import rpc from 'web.rpc';
+    const ztree_Max = 1000;
+
 
     const FieldZTreeMany2one = FieldMany2One.extend({
         supportedFieldTypes: ['many2one'],
@@ -233,10 +231,15 @@
                     ztree_selected_id: ztree_selected_id,
                 });
                 self.many2one.appendTo(self.$input.parent());
-                // self.$(".ztree").replaceWith(self.many2one);
                 self.$input.css('height', 'auto');
             });
         },
     });
-    FieldRegistry.add('ztree_select', FieldZTreeMany2one);
-    export default FieldZTreeMany2one;
+
+
+fieldRegistry.add('ztree_select', FieldZTreeMany2one);
+
+return FieldZTreeMany2one;
+
+});
+

@@ -41,7 +41,8 @@
             'yudha_many2one_ztree/static/src/js/legacy/legacy_many2one_ztree.js',
 			'yudha_many2one_ztree/static/src/js/legacy/many2one_ztree.xml',
             'yudha_many2one_ztree/static/src/js/component/many2one_ztree.js',
-
+			'yudha_many2one_ztree/static/src/js/legacy/legacy_ztreechart.js',
+            'yudha_many2one_ztree/static/src/js/component/one2many_ztree.js',
 		],
 	},
 }
