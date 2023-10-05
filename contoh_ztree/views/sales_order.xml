@@ -11,8 +11,8 @@
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_id']" position="attributes">
-                      <attribute name="widget">ztree_select</attribute>
-                    <attribute name="options">{'ztree_parent_key': 'parent_id','ztree_expend_level': '2', 'order': 'name' }</attribute>
+                <attribute name="widget">ztree_select</attribute>
+                <attribute name="options">{'ztree_parent_key': 'parent_id','ztree_expend_level': '2', 'order': 'name' }</attribute>
             </xpath>
         </field>
     </record>

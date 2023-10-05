@@ -23,6 +23,7 @@
 		'base',
 		'web',
         'sale_management',
+		'yudha_many2one_ztree',
                 ],
 	'data': [
         'views/sales_order.xml',
